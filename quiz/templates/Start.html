@@ -12,9 +12,6 @@
 		<body> 
 			<h1> FAMOUS FASHION QUOTS </h1>
 
-	context = {
-	    	"quizzes": Quiz.objects.all(),
-	}
 
 				{% for quiz in quizzes %}
     <p><a href="{% url 'quiz_page' quiz.quiz_number %}">

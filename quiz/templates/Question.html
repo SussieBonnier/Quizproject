@@ -19,7 +19,13 @@
  	<input type="radio" answer="svar" value="2">{{ answer2 }}<br>
   	<input type="radio" answer="svar" value="3">{{ answer3 }}<br>
   	<button type="submit" value="Submit">Next</button>
-    
+
+    quiz = Quiz.objects.get(quiz_number=quiz_number)
+	num_questions = quiz.questions.count()
+	if num_questions <= question_number:
+		return redirect("completed_page", quiz_number)
+	else:
+		return redirect("question_page", quiz_number, question_number + 1)
 </form>
 
 
