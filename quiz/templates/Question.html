@@ -6,27 +6,28 @@
 		<link rel="stylesheet" href="/static/css/bootstrap.css">
   		<link rel="stylesheet" href="/static/style.css">
 		</head>
-		<body> 
-			<p><a href="{% url 'question_page' quiz_number 1 %}">
+<body> 
+		<p><a href="{% url 'question_page' quiz_number 1 %}">
     Starta
-</a></p>
+	</a></p>
 
 		<h1>{{ question_number }}. {{ question }}</h1>
-	<p>{{ answer1 }}</p>
-	<p>{{ answer2 }}</p>
-	<p>{{ answer3 }}</p>
+
+<form action="{% url "answer_page" quiz.quiz_number question_number %}" method="post">
+	{% csrf_token %}
+	<input type="radio" answer="svar" value="1">{{ answer1 }}<br>
+ 	<input type="radio" answer="svar" value="2">{{ answer2 }}<br>
+  	<input type="radio" answer="svar" value="3">{{ answer3 }}<br>
+  	<button type="submit" value="Submit">Next</button>
+    
+</form>
 
 
 		<img src="http://synchlaw.se/wp-content/uploads/2017/04/yay.gif">
 
 
 	<h2> Tycker du att det är kul att lära dig kod?</h2>
-<form>
-  <input type="radio" name="svar" value="ja"> ja<br>
-  <input type="radio" name="svar" value="kanske"> kanske<br>
-  <input type="radio" name="svar" value="nej"> nej<br>
-  <input type="submit" value="Submit">
-</form>
+
 
 <p><a href="{% url 'completed_page' quiz_number %}">
     Nästa
