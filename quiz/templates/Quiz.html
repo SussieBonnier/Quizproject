@@ -5,30 +5,20 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="/static/css/bootstrap.css">
   		<link rel="stylesheet" href="/static/style.css">
+  		<link href="https://fonts.googleapis.com/css?family=Pacifico|Shadows+Into+Light" rel="stylesheet">
 		</head>
 		<body> 
-			<h1> RUBRIK </h1>
-				<h1>{{ quiz.name }}</h1>
+	
+		<h1>{{ quiz.name }}</h1>
 		<p>{{ quiz.description }}</p>
 
-		<ul style=" list-style-type:disc">
-			<li> cool </li>
-			<li> happy </li>
-			<li> curios </li>
-		</ul>
 
-		<img src="http://synchlaw.se/wp-content/uploads/2017/04/yay.gif">
+		<p><a href="{% url 'question_page' quiz_number 1 %}">
+    	Starta
+		</a></p>
 
+				<img src="http://synchlaw.se/wp-content/uploads/2017/04/yay.gif">
 
-
-
-	<h2> Tycker du att det är kul att lära dig kod?</h2>
-<form>
-  <input type="radio" name="svar" value="ja"> ja<br>
-  <input type="radio" name="svar" value="kanske"> kanske<br>
-  <input type="radio" name="svar" value="nej"> nej<br>
-  <input type="submit" value="Submit">
-</form>
 </body>
 
 

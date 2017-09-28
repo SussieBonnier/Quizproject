@@ -1,14 +1,18 @@
 body {
     background-color: pink;
-    color: purple;
+    color: black;
+    text-align: center;
 }
 
 h1 {
-    color: purple;
-    text-align: left;
+    color: black;
+     font-size: 36px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
 }
 
 p {
-    font-family: "century gothic";
-    font-size: 20px;
+   
+  	 font-size: 20px;
+	font-family: 'Shadows Into Light', cursive;    
 }

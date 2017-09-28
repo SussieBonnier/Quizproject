@@ -54,6 +54,7 @@ def completed(request, quiz_number):
 	}
 	return render(request, "completed.html", context)
 
+
 def answer(request, quiz_number, question_number):
 	answer = request.POST["answer"]
 	saved_answers = request.session.get(str(quiz_number), {})

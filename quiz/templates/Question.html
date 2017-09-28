@@ -15,29 +15,16 @@
 
 <form action="{% url "answer_page" quiz.quiz_number question_number %}" method="post">
 	{% csrf_token %}
-	<input type="radio" answer="svar" value="1">{{ answer1 }}<br>
- 	<input type="radio" answer="svar" value="2">{{ answer2 }}<br>
-  	<input type="radio" answer="svar" value="3">{{ answer3 }}<br>
+	<input type="radio" name="answer" value="1">{{ answer1 }}<br>
+ 	<input type="radio" name="answer" value="2">{{ answer2 }}<br>
+  	<input type="radio" ="answer" value="3">{{ answer3 }}<br>
   	<button type="submit" value="Submit">Next</button>
 
-    quiz = Quiz.objects.get(quiz_number=quiz_number)
-	num_questions = quiz.questions.count()
-	if num_questions <= question_number:
-		return redirect("completed_page", quiz_number)
-	else:
-		return redirect("question_page", quiz_number, question_number + 1)
 </form>
 
 
 		<img src="http://synchlaw.se/wp-content/uploads/2017/04/yay.gif">
 
-
-	<h2> Tycker du att det är kul att lära dig kod?</h2>
-
-
-<p><a href="{% url 'completed_page' quiz_number %}">
-    Nästa
-</a></p>
 
 </body>
 
