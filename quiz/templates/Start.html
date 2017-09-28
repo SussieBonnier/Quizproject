@@ -2,6 +2,8 @@
 
 <html>
 <head>
+
+
 		<meta charset="utf-8">
   		<link rel="stylesheet" type="text/css" href="Testsida.CSS">
   		<link rel="stylesheet" href="/static/css/bootstrap.css">
@@ -10,8 +12,14 @@
 		<body> 
 			<h1> FAMOUS FASHION QUOTS </h1>
 
-			<a href="Quiz.html">Klicka vidare så kommer du till min fashionquiz</a>
+				{% for quiz in quizzes %}
+    <p><a href="{% url 'quiz_page' quiz.quiz_number %}">
+        {{ quiz.name }}
+    </a></p>
+{% endfor %}
 
+
+			<a href="Quiz.html">Klicka vidare så kommer du till min fashionquiz</a>
 
 
 		<img src="http://synchlaw.se/wp-content/uploads/2017/04/yay.gif">
