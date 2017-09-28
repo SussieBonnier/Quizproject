@@ -7,9 +7,7 @@
   		<link rel="stylesheet" href="/static/style.css">
 		</head>
 <body> 
-		<p><a href="{% url 'question_page' quiz_number 1 %}">
-    Starta
-	</a></p>
+
 
 		<h1>{{ question_number }}. {{ question }}</h1>
 
@@ -17,7 +15,7 @@
 	{% csrf_token %}
 	<input type="radio" name="answer" value="1">{{ answer1 }}<br>
  	<input type="radio" name="answer" value="2">{{ answer2 }}<br>
-  	<input type="radio" ="answer" value="3">{{ answer3 }}<br>
+  	<input type="radio" name="answer" value="3">{{ answer3 }}<br>
   	<button type="submit" value="Submit">Next</button>
 
 </form>

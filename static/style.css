@@ -6,13 +6,13 @@ body {
 
 h1 {
     color: black;
-     font-size: 36px;
+     font-size: 46px;
     text-align: center;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Amatic SC', cursive;
 }
 
 p {
    
-  	 font-size: 20px;
+  	 font-size: 30px;
 	font-family: 'Shadows Into Light', cursive;    
 }
