@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 
 
 import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SECRET_KEY = 'iluv8c8!p+edo(=i1l1w-z32jyvo%-eh+jb=sxp(&&pah_ph1#'
+DEBUG = True
 
 import dj_database_url
 DATABASES = {
